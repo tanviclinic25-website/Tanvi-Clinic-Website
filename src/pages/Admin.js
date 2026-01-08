@@ -582,7 +582,7 @@ export default function Admin() {
         <div className="home-part-inner">
           <div className="home-part-card">
             <img
-              src={`${process.env.PUBLIC_URL}/images/part-acne-care.jpg`}
+              src={`${process.env.PUBLIC_URL}/Images/part-acne-care.jpg`}
               alt="Acne Care"
               className="home-part-img"
             />
@@ -595,7 +595,7 @@ export default function Admin() {
 
           <div className="home-part-card">
             <img
-              src={`${process.env.PUBLIC_URL}/images/part-pigmentation.jpg`}
+              src={`${process.env.PUBLIC_URL}/Images/part-pigmentation.jpg`}
               alt="Pigmentation"
               className="home-part-img"
             />
@@ -613,7 +613,7 @@ export default function Admin() {
 
           <div className="home-part-card">
             <img
-              src={`${process.env.PUBLIC_URL}/images/part-hair-care.jpg`}
+              src={`${process.env.PUBLIC_URL}/Images/part-hair-care.jpg`}
               alt="Hair Care"
               className="home-part-img"
             />
@@ -626,7 +626,7 @@ export default function Admin() {
 
           <div className="home-part-card">
             <img
-              src={`${process.env.PUBLIC_URL}/images/part-laser-care.jpg`}
+              src={`${process.env.PUBLIC_URL}/Images/part-laser-care.jpg`}
               alt="Laser Care"
               className="home-part-img"
             />
