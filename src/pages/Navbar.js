@@ -26,7 +26,7 @@ function Navbar() {
     <nav className="navbar">
       <div className="nav-inner">
         <Link to="/" className="logo" onClick={handleLinkClick}>
-          <img src="/Images/logo1.png" alt="logo" />
+          <img src="/Images/logo3.jpeg" alt="logo" />
         </Link>
 
         <div className="nav-links desktop-only">

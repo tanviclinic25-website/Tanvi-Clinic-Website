@@ -2,10 +2,14 @@ import React from "react";
 import "./Admin.css";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
+import { useNavigate } from "react-router-dom";
 
 
 
 export default function Admin() {
+
+  const navigate = useNavigate();
+
   const banner = `${process.env.PUBLIC_URL}/Images/main-banner1.jpg`;
 
   const caduceus = `${process.env.PUBLIC_URL}/Images/icons8-caduceus-100.png`;
@@ -33,8 +37,10 @@ export default function Admin() {
           </p>
 
           <div className="adminHeroActions">
-            <button className="adminBtn primaryBtn">Manage Appointments</button>
-            <button className="adminBtn secondaryBtn">View Patients</button>
+            <button className="adminBtn primaryBtn" onClick={() => navigate("/contact")} >
+              Manage Appointments
+            </button>
+
           </div>
         </div>
       </section>
@@ -174,8 +180,13 @@ export default function Admin() {
             </div>
 
             <div className="aboutActions">
-              <button className="aboutBtn">More About Us</button>
-              <button className="aboutBtn ghost">Explore Treatments</button>
+              <button className="aboutBtn" onClick={() => navigate("/about")}>
+                More About Us
+              </button>
+
+              <button className="aboutBtn ghost" onClick={() => navigate("/services")}>
+                Explore Treatments
+              </button>
             </div>
           </div>
         </div>
@@ -484,7 +495,7 @@ export default function Admin() {
             </div>
           </div>
 
-          <button className="derma-rotation-btn">Book Appointment</button>
+          <button className="derma-rotation-btn" onClick={() => navigate("/contact")}>Book Appointment</button>
         </div>
       </section>
 
@@ -569,8 +580,8 @@ export default function Admin() {
             </div>
 
             <div className="finalHighlightBigButtons">
-              <button className="finalHighlightBtn">Book Consultation</button>
-              <button className="finalHighlightBtn outline">View Services</button>
+              <button className="finalHighlightBtn" onClick={() => navigate("/contact")}>Book Consultation</button>
+              <button className="finalHighlightBtn outline" onClick={() => navigate("/services")}>View Services</button>
             </div>
           </div>
         </div>
@@ -590,7 +601,7 @@ export default function Admin() {
 
           <div className="home-part-text">
             <h3 className="home-part-title">Acne & Scar Care</h3>
-            <button className="home-part-btn">Book Consultation →</button>
+            <button className="home-part-btn" onClick={() => navigate("/contact")}>Book Consultation →</button>
           </div>
 
           <div className="home-part-card">
@@ -603,7 +614,7 @@ export default function Admin() {
 
           <div className="home-part-text">
             <h3 className="home-part-title">Pigmentation Treatment</h3>
-            <button className="home-part-btn">View Treatment →</button>
+            <button className="home-part-btn" onClick={() => navigate("/services")}>View Treatment →</button>
           </div>
 
           <div className="home-part-text">
@@ -621,7 +632,7 @@ export default function Admin() {
 
           <div className="home-part-text">
             <h3 className="home-part-title">Laser & Aesthetic Care</h3>
-            <button className="home-part-btn">Explore Services →</button>
+            <button className="home-part-btn" onClick={() => navigate("/services")}>Explore Services →</button>
           </div>
 
           <div className="home-part-card">
@@ -680,8 +691,8 @@ export default function Admin() {
             </div>
 
             <div className="careBigActions">
-              <button className="careBtn">Book Consultation</button>
-              <button className="careBtn ghost">Explore Services</button>
+              <button className="careBtn" onClick={() => navigate("/contact")}>Book Consultation</button>
+              <button className="careBtn ghost" onClick={() => navigate("/services")}>Explore Services</button>
             </div>
           </div>
 
@@ -808,7 +819,7 @@ export default function Admin() {
                 Advanced care for acne, pigmentation, allergies, and long term skin
                 health with safe clinical guidance.
               </p>
-              <a href="/treatments" className="three-clock-btn">
+              <a href="/treatments" className="three-clock-btn" onClick={() => navigate("/services")}>
                 View Treatments →
               </a>
             </div>
@@ -836,7 +847,7 @@ export default function Admin() {
                 Hair fall evaluation, scalp treatments, and growth plans designed to
                 match your condition and lifestyle.
               </p>
-              <a href="/treatments" className="three-clock-btn">
+              <a href="/services" className="three-clock-btn" onClick={() => navigate("/services")}>
                 Explore Hair Care →
               </a>
             </div>
@@ -882,8 +893,8 @@ export default function Admin() {
             </div>
 
             <div className="clinicShowcaseActions">
-              <button className="clinicShowBtn">Book Appointment</button>
-              <button className="clinicShowBtn ghost">Call Now</button>
+              <button className="clinicShowBtn" onClick={() => navigate("/contact")}>Book Appointment</button>
+              <button className="clinicShowBtn ghost" onClick={() => navigate("/contact")}>Call Now</button>
             </div>
           </div>
 
@@ -1092,8 +1103,7 @@ export default function Admin() {
             </div>
 
             <div className="reviewCTAButtons">
-              <button className="reviewBtn">Write a Review</button>
-              <button className="reviewBtn ghost">See More</button>
+              <button className="reviewBtn" onClick={() => navigate("/contact")}>Write a Review</button>
             </div>
           </div>
         </div>
@@ -1143,8 +1153,8 @@ export default function Admin() {
             </div>
 
             <div className="clinicInfoActions">
-              <button className="clinicInfoBtn">Book Appointment</button>
-              <button className="clinicInfoBtn ghost">Contact Clinic</button>
+              <button className="clinicInfoBtn" onClick={() => navigate("/contact")}>Book Appointment</button>
+              <button className="clinicInfoBtn ghost" onClick={() => navigate("/contact")}>Contact Clinic</button>
             </div>
           </div>
 

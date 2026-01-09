@@ -19,7 +19,7 @@ const Footer = () => {
     { label: "Home", to: "/" },
     { label: "About Clinic", to: "/about" },
     { label: "Treatments", to: "/treatments" },
-    { label: "Book Appointment", to: "/appointments" },
+    { label: "Book Appointment", to: "/contact" },
     { label: "Contact", to: "/contact" }
   ];
 
@@ -141,7 +141,7 @@ const Footer = () => {
               Not sure which treatment suits you? Book a consultation and get a clear plan based on your concern.
             </p>
             <div className="footerButtons">
-              <Link to="/appointments" className="footerBtn primary">
+              <Link to="/contact" className="footerBtn primary">
                 Book Appointment
               </Link>
               <Link to="/contact" className="footerBtn ghost">
