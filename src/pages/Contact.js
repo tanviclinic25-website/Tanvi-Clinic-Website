@@ -18,9 +18,21 @@ export default function Contact() {
   const formRef = useRef();
   const [popupVisible, setPopupVisible] = useState(false);
   const [loading, setLoading] = useState(false);
+  const [phone, setPhone] = useState("");
+
+  const handlePhoneChange = (e) => {
+    const onlyDigits = e.target.value.replace(/\D/g, "").slice(0, 10);
+    setPhone(onlyDigits);
+  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
+
+    if (phone.length !== 10) {
+      alert("Please enter a valid 10 digit mobile number.");
+      return;
+    }
+
     setLoading(true);
 
     emailjs
@@ -34,6 +46,7 @@ export default function Contact() {
         () => {
           setLoading(false);
           setPopupVisible(true);
+          setPhone("");
           formRef.current.reset();
         },
         (error) => {
@@ -117,7 +130,16 @@ export default function Contact() {
                   </div>
                   <div className="field">
                     <label>Phone</label>
-                    <input name="phone" type="tel" placeholder="Enter your phone number" required />
+                    <input
+                      name="phone"
+                      type="tel"
+                      value={phone}
+                      onChange={handlePhoneChange}
+                      placeholder="Enter 10 digit mobile number"
+                      maxLength={10}
+                      pattern="[0-9]{10}"
+                      required
+                    />
                   </div>
                 </div>
 
@@ -180,7 +202,7 @@ export default function Contact() {
           <div className="sectionHeader">
             <h2 className="sectionTitle">Meet Our Doctors</h2>
             <p className="sectionSub">
-              Experienced clinicians offering skin, hair, cosmetic and internal medicine care.
+              Experienced clinicians offering skin, hair, cosmetic and general medicine care.
             </p>
           </div>
 
